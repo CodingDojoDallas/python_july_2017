@@ -1,0 +1,9 @@
+pip install Django - I actually had to use ‘pip3’ to make this work, but the install seemed to work successfully
+pip list - This command listed all of the packages I had currently installed
+
+pip install Django - This command told me that Django was already installed
+pip freeze - pip freeze and pip list seemed like similar commands
+First cd into your Desktop directory (cd ~/Desktop), then run this command: pip freeze > requirements.txt. What do you see when you ls? What's inside this file? I saw a printout of pip list
+pip uninstall Django - this command functioned successfully
+pip show Django - this command didn’t seem to render anything
+pip search Flask. This command returned a ton of data, most of which I was unable to understand.
