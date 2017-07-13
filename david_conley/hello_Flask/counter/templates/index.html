@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Counter</title>
+	</head>
+	<body>
+			<h1>Counter: {{ session['count']}}</h1>
+		<form action="/add" method="post">
+		<button>add 2</button>
+		</form>
+		<form action="/reset_count" method="post">
+		<button>reset</button>
+		</form>
+	</body>
+</html>
