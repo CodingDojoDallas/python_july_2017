@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration</title>
+	<meta charset="utf-8"/>
+	<meta name="description" content="This is an example form that informs a user of whether or not their data is valid"/>
+</head>
+<body>
+	<h1>Please Register Below</h1>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<p>{{message}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+	<form action="/process" method='post'>
+		First Name:<input type="text" name="first_name"/><br>
+		Last Name:<input type="text" name="last_name"/><br>
+		Email:<input type="text" name="email"/><br>
+		Password:<input type="password" name="password"/><br>
+		Confirm Password:<input type="password" name="confirm_password"/>
+		<input type="submit" value="submit"/>
+	</form>
+	<form action="/user_login" method="post">
+		<hr>
+		<label for="email">Email: <input type="text" name="email"></label><br>
+		<label for="password">Password: <input type="password" name="password"></label><br>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>
