@@ -1,0 +1,5 @@
+For this assignment I changed the password values to produce connection errors in the terminal.
+
+I also changed the database connection from 8889 to 3336 to see what would happen as well. 
+
+This was an intersting assignment because I was able to see what would happen if I forget to format my connector document to new applications.
