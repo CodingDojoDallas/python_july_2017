@@ -1,0 +1,27 @@
+regex.txt
+Group Project for Python Stack
+Leif Anderson 7/14/17
+
+1. r"ss"
+
+2. r"b(\w)b"
+
+3. r"b(\w)+b"
+
+4. r"a(\w)*e(\w)*i(\w)*o(\w)*u"
+
+5. r"[aeiou][aeiou]$"
+
+6. r"^[regularexpression]+$" or r"^[regularexpression]*$"
+
+7. r"^[^regex]+$" or r"^[^regex]*$"
+
+8. r"b(\w)*b"
+
+9. r"b(\w)+b"
+
+10.
+
+11.
+
+12, r"(\w)\1\w*(\w)\2"
