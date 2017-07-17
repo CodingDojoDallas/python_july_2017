@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>result</title>
+	<meta charset="utf-8">
+	{% load staticfiles %}
+      <!-- listen for static files -->
+      <link rel="stylesheet" href="{% static '/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<h2>Thanks for submitting this form! You have submitted this form {{request.session.count}} times now.</h2>
+	<div id="results">
+	<h3>Name: {{request.session.name}}</h3>
+	<h3>Dojo Location: {{request.session.location}}</h3>
+	<h3>Favorite Language: {{request.session.language }}</h3>
+	<h3>Comment: {{request.session.comment}}</h3>
+	<button><a href="/">Go Back</a></button>
+	</div>
+</body>
+</html>

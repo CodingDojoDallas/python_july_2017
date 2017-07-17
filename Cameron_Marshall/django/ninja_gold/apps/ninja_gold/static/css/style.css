@@ -1,0 +1,30 @@
+/*  css reset */
+* {
+	padding: 0px;
+	margin: 15px;
+}
+
+body {
+}
+
+.activity {
+    display: inline-block;
+    border: 1px solid;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    vertical-align: top;
+}
+
+.lost {
+	color: red;
+}
+
+.gained {
+	color: green;
+}
+
+
+
+
+

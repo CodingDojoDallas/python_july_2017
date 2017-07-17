@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Display</title>
+	{% load staticfiles %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static '/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<form action='/handle_survey' method='post'>
+		{% csrf_token %}
+		Your Name: <input type='text' name='name'>
+		Dojo Location:<select name="location">
+			<option value="dallas">Dallas</option>
+			<option value="seatle">Seattle</option>
+			<option value="la">Las Angeles</option>
+			<option value="tulsa">Tulsa</option>
+		</select>
+		Favorite Language:<select name="language">
+			<option value="python">Python</option>
+			<option value="javascript">Javascript</option>
+			<option value="ruby">Ruby</option>
+			<option value="php">PHP</option>
+		</select>
+		Comment(optional):<textarea name="comment" rows="10" cols="30"></textarea>
+		<input type='submit' value="submit">
+	</form>
+</body>
+</html>
