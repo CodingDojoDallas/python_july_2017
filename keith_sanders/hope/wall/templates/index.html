@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+    <h2>The Wall App</h2>
+
+    <!-- Register -->
+    <h4>Register</h4>
+    <!-- Register Errors -->
+    {% with errors = get_flashed_messages(category_filter=["register"]) %}
+        {% if errors %}
+            {% for error in errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <!-- End Register Errors -->
+
+    <!-- Register Form -->
+    <form action="/register" method="post">
+        <!-- first_name input -->
+        <label>First Name:</label>
+        <input type="text" name="first_name" />
+        <!-- last_name input -->
+        <label>Last Name:</label>
+        <input type="text" name="last_name" />
+        <!-- email input -->
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <!-- password input -->
+        <label>Password:</label>
+        <input type="password" name="password" />
+        <!-- password_confirmation input -->
+        <label>Password Confirmation:</label>
+        <input type="password" name="password_confirmation" />
+        <!-- Submit -->
+        <input type="submit" value="Register" />
+    </form>
+    <!-- End Register Form -->
+    <!-- End Register -->
+
+    <!-- Login -->
+    <h4>Login</h4>
+    <!-- Login Errors -->
+    {% with errors = get_flashed_messages(category_filter=["login"]) %}
+        {% if errors %}
+            {% for error in errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <!-- End Login Errors -->
+    
+    <!-- Login Form -->
+    <form action="/login" method="post">
+        <!-- email input -->
+        <label>Email:</label>
+        <input type="email" name="email" />
+        <!-- password input -->
+        <label>Password:</label>
+        <input type="password" name="password" />
+        
+        <!-- Submit -->
+        <input type="submit" value="Login" />
+    </form>
+    <!-- End Login Form -->
+    <!-- End Login -->
+</body>
+</html>
