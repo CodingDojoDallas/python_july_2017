@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>results</title>
+	{% load staticfiles %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static '/ninjas/css/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <h1>Your randomly selected numbers are</h1>
+    {% if message %}
+        <h2> {{ message }} </h2>
+    {% endif %}
+    {% for number in numbers %}
+        <p> {{ number }} </p>
+    {% endfor %}
+    <a href="{% url 'index' %}">try again!</a>
+</body>
+</html>
