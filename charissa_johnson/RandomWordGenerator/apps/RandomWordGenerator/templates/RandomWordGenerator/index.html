@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Random Word Generator</title>
+	</head>
+	<body>
+		<h1>Random Word</h1>	
+		<!-- The attempt number should start at 1 and increase each time you generate a new random keyword -->
+		<form action="/generate" method="post">
+			{% csrf_token %}
+			 <p>(attempt #{{ request.session.attempt }}	
+			)</p>
+			<p>{{ word }}</p>
+			<input type="submit" value="generate">	
+		</form>
+	</body>
+</html>

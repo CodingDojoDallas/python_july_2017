@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+	</head>
+	<body>
+		<form action='/process' method='post'>
+			{% csrf_token %}
+			<label>Your name: </label>
+			<input type="text" name="name">
+			<label>Dojo Location</label>
+			<select name="location">
+				<option>Mountain View</option>
+				<option>Dalls</option>
+				<option>Seattle</option>
+				<option>DC</option>
+			</select>
+			<select name="language">
+				<option>JavaScript</option>
+				<option>Python</option>
+				<option>Java</option>
+				<option>Ruby</option>
+			</select>
+			<label>Comment</label>
+			<textarea name="comment"></textarea>
+			<input type="submit" value="submit">
+		</form>
+	</body>
+</html>
