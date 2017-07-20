@@ -1,0 +1,17 @@
+
+1. Django installed
+ 
+2. Pip list displays a list of packages
+
+3. Requirement already satisfied: Django in c:\python27\lib\site-packages
+Requirement already satisfied: pytz in c:\python27\lib\site-packages (from Django)
+
+4. pip freeze - shows packages and versions
+  
+5. pip freeze > file adds packages to files
+
+6. pip show Django - info about an installed package.
+
+7. pip uninstall Django - uninstall & check
+
+8. pip search Flask - returns package list
