@@ -1,0 +1,24 @@
+h1{
+  color: rgb(200, 100, 100);
+}
+
+table{
+  width: 600px;
+}
+
+th{
+  color: rgb(80,125,150);
+  font-family: helvetica;
+  font-style: italic;
+}
+
+td{
+  font-family: helvetica;
+  font-style: italic;
+  color: rgb(150,75,100)
+}
+
+form > label{
+  font-family: helvetica;
+  color: rgb(200, 100, 100);
+}
