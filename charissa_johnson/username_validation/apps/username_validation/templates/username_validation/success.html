@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Process</title>
+	</head>
+	<body>
+		<p>Thank you, you're username {{request.session.usernames}} is valid</p>
+
+		<table>
+			<tr>
+				<th>Email</th>
+				<th>Created</th>
+			</tr>
+			{% for username in usernames %}
+			<tr>
+				<td>{{ username.username }}</td>
+				<td>{{ username.created_at }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

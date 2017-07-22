@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Username</title>
+	</head>
+	<body>
+		{% if messages %}
+			{% for message in messages %}
+				<p>{{ message }}</p>
+			{% endfor %}
+		{% endif %}
+		<form action='/process' method='post'>
+			{% csrf_token %}
+			<label>Username: </label>
+			<input type="text" name="username">
+			<input type="submit" value="submit">
+		</form>
+	</body>
+</html>
