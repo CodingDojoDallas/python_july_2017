@@ -1,0 +1,36 @@
+/* css reset  */
+* {
+	padding: 0px;
+	margin: 5px;
+}
+
+body {
+	background-color: teal;
+}
+
+header {
+	height: 50px;
+}
+
+h1 {
+	display: inline-block;
+}
+nav{
+	float: right;
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+}
+
+li {
+	display: inline-block;
+	border: 1px solid
+}
+
+li:hover {
+	background-color: blue;
+}

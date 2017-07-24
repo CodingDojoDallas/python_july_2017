@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Display</title>
+	{% load staticfiles %}
+      <!-- The line above tells Django to be ready to listen for static files -->
+      <link rel="stylesheet" href="{% static '/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+	<h1>Random word Attempt # {{request.session.count}}</h1>
+	<h2>{{ word }}</h2>
+	<form action='/generate' method = 'post'>
+		{% csrf_token %}
+		<input type='submit' value="Generate">
+	</form>
+	<form action='/clear' method = 'post'>
+		{% csrf_token %}
+		<input type='submit' value="Clear">
+	</form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* css reset  */
+* {
+	padding: 0px;
+	margin: 15px;
+}
+
+body {
+}
+
+#results {
+	border: 1px solid;
+}
+
+input, select, textarea {
+	display: block;
+}

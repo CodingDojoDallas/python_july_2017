@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sample</title>
+	{% load staticfiles %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static '/sample/css/style.css' %}" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+<h1>sample</h1>
+{# adds the form information to page. SEE VIEWS INDEX #}
+<div>
+	{% for user in users %}
+		<h2>{{ user.first_name}} {{ user.last_name}}</h2>
+		<h2>{{ user.password}}</h2>
+	{% endfor %}
+</div>
+<form action="users" method="post">
+	{% csrf_token %}
+	<label for="">First Name</label>
+	<input type="text" name="first_name" placeholder="First Name">
+	<label for="">Last Name</label>
+	<input type="text" name="last_name" placeholder="last Name">
+	<label for="">Password</label>
+	<input type="password" name="password" placeholder="Password">
+	<input type="submit" value="Submit">
+</form>
+<div>
+	{% for blog in blogs %}
+		<h2>{{ blog.title }}</h2>
+		<h2>{{ blog.blog }}</h2>
+		{% for comment in blog.comment_set.all() %}
+			{{ comment.comment }}
+		{% endfor %}
+		<form action="/comments/{{ blog.id }}" method="post">
+			{% csrf_token %}
+			<textarea name="comment" rows="8" cols="80"></textarea>
+			<input type="submit" value="Enter Comment on This Blog">
+		</form>
+	{% endfor %}
+	<form action="/blogs" method="post">
+		{% csrf_token %}
+		Title
+		<input type="text" name="title">
+		<textarea name="blog" rows="8" cols="80"></textarea>
+		<input type="submit" value="Enter Blog">
+	</form>
+</body>
+</html>
