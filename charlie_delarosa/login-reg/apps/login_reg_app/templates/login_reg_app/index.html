@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    {%load static%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+  </head>
+  <body>
+    <h2>Registration</h2>
+    <form class="" action="/create" method="post">
+      {%csrf_token%}
+      <label for="">First Name:</label>
+      <input type="text" name="first_name" value="">
+
+      <label for="">Last Name:</label>
+      <input type="text" name="last_name" value="">
+
+      <label for="">Email:</label>
+      <input type="email" name="email" value="">
+
+      <label for="">Password:</label>
+      <input type="password" name="password" value="">
+
+      <label for="">Password Confirmation:</label>
+      <input type="password" name="password_confirmation" value="">
+
+      <input type="submit" name="" value="Register">
+    </form>
+
+    <h2>Login</h2>
+    <form class="" action="/login" method="post">
+      {%csrf_token%}
+      <label for="">Email:</label>
+      <input type="email" name="email" value="">
+
+      <label for="">Password:</label>
+      <input type="password" name="password" value="">
+
+      <input type="submit" name="" value="Login">
+    </form>
+  </body>
+</html>
