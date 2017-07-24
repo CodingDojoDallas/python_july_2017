@@ -1,0 +1,19 @@
+h1{
+  color: cornflowerblue;
+}
+
+p{
+  color: firebrick;
+}
+
+form{
+  color: goldenrod;
+}
+
+body > form > input:last-child{
+  color: darkslateblue;
+}
+
+body > label{
+  color: slateblue;
+}
