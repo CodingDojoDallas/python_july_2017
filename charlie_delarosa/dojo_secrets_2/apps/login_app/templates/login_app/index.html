@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login_app Home Page</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  </head>
+  <body>
+    <!-- Errors -->
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    <!-- End Errors -->
+    <h1>Register</h1>
+    <form class="" action="{% url 'register' %}" method="post">
+      {% csrf_token %}
+
+      <label for="">First Name:</label>
+      <input type="text" name="first_name" value="">
+
+      <label for="">Last Name:</label>
+      <input type="text" name="last_name" value="">
+
+      <label for="">Email:</label>
+      <input type="email" name="email" value="">
+
+      <label for="">Password:</label>
+      <input type="password" name="password" value="">
+
+      <label for="">Password Confirmation:</label>
+      <input type="password" name="password_confirmation" value="">
+
+      <input type="submit" name="" value="Register">
+
+    </form>
+
+    <h1>Login</h1>
+    <form class="" action="{% url 'login' %}" method="post">
+      {%csrf_token%}
+
+      <label for="">Email:</label>
+      <input type="email" name="email" value="">
+
+      <label for="">Password:</label>
+      <input type="password" name="password" value="">
+
+      <input type="submit" name="" value="Login">
+
+    </form>
+  </body>
+</html>
