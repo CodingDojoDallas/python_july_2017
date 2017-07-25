@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title>The Wall</title>
+</head>
+<body>
+    <header>
+        <span id="logo">
+            CodingDojo Wall
+        </span>
+        <span id="welcome">Welcome {{ user['first_name'] }}</span>
+        <a href="/logout">Logout</a>
+        <hr>
+    </header>
+    <!-- Notifications -->
+    {% with messages = get_flashed_messages(category_filter=["message"]) %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <!-- End Notifications -->
+
+    <!-- Main Container -->
+    <div id="container">
+        <!-- Message Form -->
+        <h4>Post a message</h4>
+        <!-- Message Errors -->
+        {% with errors = get_flashed_messages(category_filter=["post"]) %}
+            {% if errors %}
+                {% for error in errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <!-- End Message Errors -->
+        <form action="/message-create" method="post">
+            <!-- content input -->
+            <textarea name="content"></textarea>
+            <!-- Submit -->
+            <input type="submit" value="Post a message" />
+        </form>
+        <!-- End Message Form -->
+
+        <!-- Post Output -->
+        <div id="post">
+            <!-- Comment Errors -->
+            {% with errors = get_flashed_messages(category_filter=["comment"]) %}
+                {% if errors %}
+                    {% for error in errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <!-- End Comment Errors -->
+
+            {% for message in messages %}
+                <!-- Message Output -->
+                <div class="message-content">
+                    <div class="title">
+                        <p>{{ message['first_name'] }} {{ message['last_name'] }} - {{ message['created_at'].strftime("%B %d, %Y") }} </p>
+                    </div>
+                    <p>{{ message['content'] }}</p>
+                </div>
+                <!-- Delete Message -->
+                {% if message['user_id'] == user['id'] %}
+                    <form action="message-delete/{{ message['id'] }}" method="post">
+                        <!-- Submit -->
+                        <input type="submit" value="Delete Message" />
+                    </form>
+                {% endif %}
+                <!-- End Delete Message -->
+                <!-- End Message Output -->
+
+                <!-- Comment Form -->
+                {% if message['user_id'] != user['id'] %}
+                    <h4>Post a comment</h4>
+                    <div class="comment-form">
+                        <form action="comment-create/{{ message['id'] }}" method="post">
+                            <!-- comment content -->
+                            <textarea name="content"></textarea>
+                            <!-- Submit -->
+                            <input type="submit" value="Post a comment" />
+                        </form>
+                    </div>
+                {% endif %}
+                <!-- End Comment Form -->
+
+                <!-- Comment Output -->
+                {% for comment in comments %}
+                    {% if comment['message_id'] == message['id'] %}
+                        <div class="comment-content">
+                            <div class="title">
+                                <p>{{ comment['first_name'] }} {{ comment['last_name'] }} - {{ comment['created_at'].strftime("%B %d, %Y") }} </p>
+                            </div>
+                            <p>{{ comment['content'] }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <!-- End Comment Output -->
+                <hr>
+            {% endfor %}
+        </div>
+        <!-- Post Output -->
+    </div>
+    <!-- End Main Container -->
+</body>
+</html>

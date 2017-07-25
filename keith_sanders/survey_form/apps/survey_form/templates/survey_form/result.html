@@ -1,0 +1,17 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Success!</title>
+</head>
+<body>
+	<h1>Thank you for submitting a form! You have submit this form {{ request.session.count }} times now.</h1>
+	<div id="info">
+		<h2>info</h2>
+		<h3>Name: {{name}}</h3>
+		<h3>Dojo Location: {{location}}</h3>
+		<h3>Favorite Language: {{language}}</h3>
+		<h3>Comment: {{comment}}</h3>
+	</div>
+	<button><a href="/">Back Home</a></button>
+</body>
+</html>

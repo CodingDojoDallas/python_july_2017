@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <h1>Survey Forms:</h1>
+        <form action='/survey_process' method='post'>
+            {% csrf_token %} 
+        Your Name: <input type='name' name='name'>
+        Dojo Location: <select name="location">
+            <option value='dallas'>Dallas</option>
+            <option value="seattle">Seattle</option>
+            <option value="los angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            </select>
+        Favortie Language: <select name="language">
+            <option value="python">Python</option>
+            <option value="c++">C++</option>
+            <option value="ruby">Ruby on Rails</option>
+            <option value="java">Java</option>
+            </select>
+        Comments (optional): <textarea name="comment" rows="15" cols="10">
+            </textarea>
+          <input type='submit' value='submit'>
+        </form>
+    </body>
+</html>

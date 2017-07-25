@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Success!</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Email:</h1>
+         {% for email in email: %}
+  <table>
+    <tr>
+      <td> {{ email['email'] }}</td>
+      <td> {{ email['created_at'] }} </td>
+    </tr>
+  </table>
+  {% endfor %}
+  <input type="submit" value="delete" id="delete">
+    </body>
+</html>
