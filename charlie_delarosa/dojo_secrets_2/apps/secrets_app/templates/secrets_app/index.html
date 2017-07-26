@@ -6,10 +6,10 @@
   </head>
   <body>
     <h1>Welcome, {{ user.first_name}}!</h1>
-    <a href="{% url 'logout' %}"></a>
+    <a href="{% url 'logout' %}">Logout</a>
 
     <p>Create a new secret</p>
-    <form class="" action="{% 'create-secret' %}" method="post">
+    <form class="" action="{% url 'create-secret' %}" method="post">
       {% csrf_token %}
       <textarea name="content"></textarea>
       <input type="submit" name="" value="Create">
@@ -26,13 +26,13 @@
           <input type="submit" name="" value="Delete Secret">
         </form>
         <!-- Like Button -->
-        {% elif user not in secret.liked_by.all %}
+      {% elif user not in secret.liked_by.all %}
           <a href="{% url 'like-secret' id=secret.id %}">Like</a>
           <!-- Unlike Button -->
-        {% else %}
+      {% else %}
           <a href="{% url 'unlike-secret' id=secret.id %}">Unlike</a>
-        {% endif %}
-        <hr>
+      {% endif %}
+      <hr>
     {% endfor %}
   </body>
 </html>

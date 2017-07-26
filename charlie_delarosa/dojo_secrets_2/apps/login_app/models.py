@@ -8,16 +8,16 @@ class UserManager(models.Manager):
         id = request.session['user_id']
         return User.objects.get(id=id)
 
-    def validateRegistration(self, form_date):
+    def validateRegistration(self, form_data):
         errors = []
 
-        if len(form_data)['first_name'] == 0:
+        if len(form_data['first_name']) == 0:
             errors.append("First Name is required.")
-        if len(form_data)['last_name'] == 0:
+        if len(form_data['last_name']) == 0:
             errors.append("Last Name is required.")
-        if len(form_data)['email'] == 0:
+        if len(form_data['email']) == 0:
             errors.append("Email is required.")
-        if len(form_data)['password'] == 0:
+        if len(form_data['password']) == 0:
             errors.append("Password is required.")
         if form_data['password'] != form_data['password_confirmation']:
             errors.append("Passwords do not match.")
@@ -27,9 +27,9 @@ class UserManager(models.Manager):
     def validateLogin(self, form_data):
         errors = []
 
-        if len(form_data)['email'] == 0:
+        if len(form_data['email']) == 0:
             errors.append("Email is required.")
-        if len(form_data)['password'] == 0:
+        if len(form_data['password']) == 0:
             errors.append("Password is required.")
 
         return errors
@@ -50,7 +50,7 @@ class UserManager(models.Manager):
 class User(models.Model):
     first_name = models.CharField(max_length = 255)
     last_name = models.CharField(max_length = 255)
-    email = models.EmailField()
+    email = models.EmailField(max_length=255)
     password = models.CharField(max_length = 255)
     friends = models.ManyToManyField('self', related_name = 'friend_by')
     created_at = models.DateTimeField(auto_now_add = True)

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.db.models import Count
 from ..login_app.models import User
 from .models import Secret
@@ -12,7 +12,7 @@ def index(request):
         'secrets' : secrets,
     }
 
-    return render(request, 'secrets_app/index.html')
+    return render(request, 'secrets_app/index.html', context)
 
 def create(request):
     if request.method == "POST":
