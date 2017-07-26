@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>success</title>
+  </head>
+  <body>
+    <label for="">The username you entered ({{request.session.name}}) is valid.  Thank you!</label>
+
+    <p>Usernames entered:</p>
+
+    <table>
+      {% for user in usernames %}
+      <tr>
+        <td>{{user.email}}</td>
+        <td>{{user.created_at}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    
+    <form class="" action="return_home" method="post">
+      {% csrf_token %}
+      <input type="submit" name="" value="Back to Home Page">
+    </form>
+  </body>
+</html>

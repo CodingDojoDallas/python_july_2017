@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Delete a course</title>
+    </head>
+    <body>
+        <h2>Are you sure you want to delete the following course?</h2>
+        <h2>Name:</h2> {{  course.title  }}
+        <h2>Description:</h2> {{  course.description  }}
+        <button>No</button>
+        <form action="/destroy">
+            <input style="submit" value ="Delete" />
+        </form>
+
+    </body>
+</html>

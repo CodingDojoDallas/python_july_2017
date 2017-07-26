@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link rel="stylesheet" type = "text/css" href="{%static 'css/full_stack_books_style.css' %}">
+    <!-- href="{% static 'polls/style.css' %}" -->
+    <title>Home</title>
+  </head>
+  <body>
+    <h1>Add A Book</h1>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+      <td>{{book.id}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.category}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+    <form class="" action="/add" method="post">
+      {% csrf_token %}
+      <label for="">Title:</label>
+      <input type="text" name="title" value="">
+      <label for="">Author</label>
+      <input type="text" name="author" value="">
+      <label for="">Category</label>
+      <input type="text" name="category" value="">
+      <input type= "submit" name="" value="Submit">
+    </form>
+    <form class="" action="remove" method="post">
+      {% csrf_token %}
+      <label for="">Remove Book-Enter ID:</label>
+      <input type="text" name="remove" value="">
+      <input type="submit" name="" value="Remove">
+    </form>
+  </body>
+</html>
