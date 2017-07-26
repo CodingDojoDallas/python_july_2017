@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Add a student to aall bootcamp courses</title>
+    </head>
+    <body>
+        <div>
+            <h2>Add a new course</h2>
+
+        <form action="/create" method="post" />{% csrf_token %}
+        <label>Name:</label>
+        <input type="text" name="title"  />
+        <label>Description:</label>
+        <input type="text" name="description" />
+
+        <input type="submit" value ="Add" />
+        </div>
+        <div>
+            <h2>Courses</h2>
+            <p>
+                {{  courses }}  {{  description  }} {{  created_at  }}
+                <a href="/destroy">remove</a>
+            </p>
+        </div>
+    </form>
+    </body>
+</html>
