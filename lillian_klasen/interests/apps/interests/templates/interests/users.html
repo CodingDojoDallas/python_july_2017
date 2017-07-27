@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Interests</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>User Name</th>
+            <th>Action</th>
+        </tr>
+
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td><a href='/show/{{ user.id }}'>view</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">enter another user interest</a>
+
+
+</body>
+</html>

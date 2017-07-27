@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PersonBook</title>
+</head>
+<body>
+    <h1>Check if your friend is registered on PersonBook:</h1>
+
+    <form action='/check' method='post'>
+        {% csrf_token %}
+        Email: <input type='text' name='email'>
+        <input type='submit' value='Submit!'>
+    </form>
+
+</body>
+</html>
