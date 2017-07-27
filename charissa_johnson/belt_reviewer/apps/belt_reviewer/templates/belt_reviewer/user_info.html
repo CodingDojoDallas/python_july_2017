@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>View User</title>
+	</head>
+	<body>
+		<a href="{% url 'register' %}">Logout</a>
+		<a href="{% url 'books' %}">Home</a>
+		<h1>User: {{ book.user.first_name }}</h1>
+		<p>Name: {{ book.user.first_name }} {{ book.user.last_name }}</p>
+		<p>Email: {{ book.user.email }}</p>
+	</body>
+</html>

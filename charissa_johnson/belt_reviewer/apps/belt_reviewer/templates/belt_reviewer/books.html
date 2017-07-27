@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Books</title>
+	</head>
+	<body>
+		<h1>Welcome, {{ current_user.first_name }}</h1>
+		<a href="{% url 'addBook' %}">Add a Book and Review</a>
+		<a href="{% url 'register' %}">Logout</a>
+		<h1>Recent Book Reviews</h1>
+		{% for book in books %}
+			<h4><a href="{% url 'book_info' id=book.id %}">{{ book.title }}</a></h4>
+			<h4>{{ book.author }}</h4>
+			<p>{{ book.rating }} Stars</p>
+			<p><a href="{% url 'user_info' id=book.id %}">{{ book.user.first_name }}</a> says "{{ book.review }}"</p>
+			<p>{{ book.created_at }}</p>
+			<form action="{% url 'removeReview' id=book.id %}" >
+				{% csrf_token %}
+				<input type="submit" value="Remove">
+			</form>
+			<hr>
+		{% endfor %}
+	</body>
+</html>

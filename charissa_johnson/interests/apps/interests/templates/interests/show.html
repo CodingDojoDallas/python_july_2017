@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Show</title>
+	</head>
+	<body>
+		<h1>Interests</h1>
+		<p>{{ user.name }}'s Interests</p>
+		
+		{% for interest in user.interests.all %}
+			<p>{{ interest.name }}</p>
+			<form action="{% url 'removeInterest' id=interest.id %}">
+				{% csrf_token %}
+				<input type="submit" value="Remove">
+			</form>
+		{% endfor %}
+
+		<a href="{% url 'users' %}">Back to users</a>
+		<a href="{% url 'landing' %}">Enter another user interest</a>
+	</body>
+</html>

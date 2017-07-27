@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+	</head>
+	<body>
+		<h1>Thangs</h1>
+
+		{% for blog in blogs %}
+		   <p>{{ blog.title }}</p>
+		   <p>{{ blog.blog }}</p>
+  		{% endfor %}
+	  <form action="/blogs" method="post">
+	   	{% csrf_token %}
+	   	Title
+		   <input type="text" name="title">
+		   <textarea name="blog" rows="8" cols="80"></textarea>
+		   <input type="submit" value="Enter Blog">
+	  </form>
+
+	  <!-- Comments -->
+	  {% for comment in blog.comment_set.all() %}
+ 		{{ comment.comment }}
+	  {% endfor %}
+	  <form action="/comments/{{ blog.id }}" method="post">
+	   {% csrf_token %}
+	   <textarea name="comment" rows="8" cols="80"></textarea>
+	   <input type="submit" value="Enter Comment on This Blog">
+	  </form>
+	</body>
+</html>
