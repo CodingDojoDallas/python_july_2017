@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Book Info</title>
+	</head>
+	<body>
+		<a href="{% url 'register' %}">Logout</a>
+		<a href="{% url 'books' %}">Home</a>
+		<h4>{{ book.title }}</p></h4>
+		<h4>{{ book.author }}</h4>
+		<p>{{ book.rating }} Stars</p>
+		<p><a href="{% url 'user_info' id=book.id %}">{{ book.user.first_name }}</a> says "{{ book.review }}"</p>
+		<p>{{ book.created_at }}</p>
+		<hr>
+	</body>
+</html>

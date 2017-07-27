@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Most Popular</title>
+	</head>
+	<body>
+		<h1>Most Popular Secrets</h1>
+		<!-- Pull in secrets with highest amount of likes -->
+		{% for secret in secrets %}
+			<p>{{ secret.content }}</p>
+		{% endfor %}
+		<a href="{% url 'secrets'%}">Back</a>
+	</body>
+</html>

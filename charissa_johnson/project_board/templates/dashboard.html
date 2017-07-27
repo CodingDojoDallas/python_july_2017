@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dashboard</title>
+	</head>
+	<body>
+		<h1>Current Projects</h1>
+
+		<table>
+		<tr>
+			<th>Project Name</th>
+			<th>Date Due</th>
+			<th>Action</th>
+		</tr>
+		{% for project in projects %}
+			<tr>
+				<td>{{project.project_name}}</td>
+				<td>{{project.due_date}}</td>
+				<td>
+					<a href="/show">Details</a>
+				</td>			
+		{% endfor %}
+			</tr>
+	</table>
+
+	<form action='/add_project' method='post'>
+		<input type="submit" value="Add Project">
+	</form>
+	</body>
+</html>
