@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #F0D342;
+}
+
+.box {
+    border: 2px solid black;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+
+}
+
+.box:first-child {
+    margin-left: 100px;
+    padding: 20px;
+    height: 150px;
+    width: 150px;
+}
+
+#activities {
+    border: 2px solid black;
+    width: 1000px;
+    height: 300px;
+    padding: 20px;
+}

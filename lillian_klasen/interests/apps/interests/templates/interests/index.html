@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Interests</title>
+</head>
+<body>
+    <form action='/users' method='post'>
+        {% csrf_token %}
+        Name: <input type='text' name='name'>
+        <br>
+        <br>
+        Interest: <input type='text' name='interest'>
+        <br>
+        <br>
+        <input type='submit' value='Submit'>
+    </form>
+
+</body>
+</html>

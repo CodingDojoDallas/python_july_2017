@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Success</title>
+</head>
+<body>
+    <h1>Welcome </h1>
+
+    <a href="/add">Add Book and Review</a>
+
+    <h3>Recent Book Reviews:</h3>
+
+    {% for book in books%}
+    <p><a href="/bookInfo/{{ book.id }}">{{ book.title }}</a></p>
+    <p>{{ book.rating }} stars</p>
+    <p><a href="/userInfo/{{ book.user.id }}">{{ book.user.first_name }}</a> says: {{ book.review }}</p>
+    <p>Posted on: {{ book.created_at }}</p>
+    {% if current_user.id == book.user.id %}
+    <form action='/removeReview/{{ book.id }}' method='post'>
+    {% csrf_token %}
+    <input type='submit' value='Remove Review'>
+    </form>
+    <hr>
+    {% endif %}
+    {% endfor %}
+</body>
+</html>

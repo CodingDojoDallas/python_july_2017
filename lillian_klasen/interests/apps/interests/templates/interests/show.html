@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Interests</title>
+</head>
+<body>
+    <h1>{{ user.name }}'s Interests:</h1>
+
+    {% for interest in user.interests.all %}
+
+    <p>{{ interest.name }}  <a href='/remove/{{ interest.id }}'>remove</a></p>
+
+    {% endfor %}
+    <hr>
+
+    <br>
+    <br>
+
+    <a href='/create_interest'>back to users</a>
+    <br>
+    <br>
+    <a href='/'>enter another user interest</a>
+</body>
+</html>
