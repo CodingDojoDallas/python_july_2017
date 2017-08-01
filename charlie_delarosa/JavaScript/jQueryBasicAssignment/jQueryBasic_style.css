@@ -1,0 +1,155 @@
+/*jQuery.style.css*/
+
+#wrapper{
+    height: 1200px;
+    width: 800px;
+    background-color: white;
+}
+
+.section{
+    height: 120px;
+    width: 800px;
+    border-bottom: 5px solid black;
+    font-size: 36pt;
+    text-align: center;
+}
+
+.button_and_desc{
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14pt;
+}
+
+#button_click{
+    font-size: 14pt;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-right: 35px;
+}
+
+#button_hide{
+    font-size: 14pt;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-right: 35px;
+}
+
+#chenonceau{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+#button_show{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_toggle{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_slidedown{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_slideup{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_slidetoggle{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_fadein{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_fadeout{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_addclass{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_before{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_after{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_append{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+.selected{
+  color: magenta;
+}
+
+#appendme{
+  font-size: 18pt;
+  color: navy;
+}
+
+#before{
+  font-size: 18pt;
+  color: black;
+}
+
+#after{
+  font-size: 18pt;
+  color: black;
+}
+
+#html_content{
+  font-size: 14pt;
+  color: darkorange;
+}
+
+#button_attr{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#button_val{
+  font-size: 14pt;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  margin-right: 35px;
+}
+
+#val_div{
+line-height: 0px;
+display: inline-block;
+padding-bottom: 55px;
+}
+
+input {
+  vertical-align: top;
+}
+
+h4 {
+  font-size: 18pt;
+  line-height: 0px;
+}

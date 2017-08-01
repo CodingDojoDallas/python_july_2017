@@ -1,0 +1,18 @@
+/*Ninja.css*/
+
+
+.ninja_class{
+  border: 5px solid black;
+  width: 105px;
+  height: 125px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#restore_button{
+  font-size: 14pt;
+  background-color: lightgreen;
+  margin-left: 20px;
+}
