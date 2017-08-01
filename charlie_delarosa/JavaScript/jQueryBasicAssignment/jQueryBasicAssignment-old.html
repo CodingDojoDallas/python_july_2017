@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>jQuery Basic Assignment</title>
+    <link rel="stylesheet" type="text/css" href="jQueryBasic_style.css">
+    <meta charset="utf-8">
+    <meta name="description" content="internet class">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      $("#button_click").click(function(){
+      alert("Hello");
+      });
+
+      $("#button_hide").click(function(){
+        $("img").hide();
+      });
+
+      $("#button_show").click(function(){
+        $("img").show();
+      });
+
+      $("#button_toggle").click(function(){
+        $("img").toggle();
+      });
+
+      $("#button_slidedown").click(function(){
+        if ($( "img").is( ":hidden")){
+          $("img").slideDown("slow");
+        } else {
+          $("img").hide();
+        }
+      });
+
+      $("#button_slideup").click(function(){
+        if ($( "img").is( ":hidden")){
+          $("img").show("slow");
+        } else {
+          $("img").slideUp();
+        }
+      });
+
+      $("#button_slidetoggle").click(function(){
+        $("p").slideToggle("slow");
+      });
+
+      $("#button_fadein").click(function(){
+        $("p").hide();
+        $("p").fadeIn(2500);
+      });
+
+      $("#button_fadeout").click(function(){
+        $("p").show();
+        $("p").fadeOut(2500);
+      });
+
+      $("#button_addclass").click(function(){
+        $("h4").addClass("selected")
+      });
+
+      $("#button_before").click(function(){
+        $("#before").before($("#after"));
+      });
+
+      $("#button_after").click(function(){
+        $("#before").after($("#after"));
+      });
+
+      $("#button_append").click(function(){
+        $("#appendme").append(" World!");
+      });
+
+      $("h2").click(function(){
+        $(this).html("<p>Now it's changed</p>");
+      });
+
+    });
+
+    </script>
+
+    </head>
+
+    <body>
+        <wrapper id="wrapper">
+            <div class = "section">
+                Click
+                <div class = "button_and_desc">
+                    <button id = "button_click">Click</button>
+                    Click the button for a surprise!
+                </div>
+            </div><!--click-->
+
+            <div class = "section">
+                Hide
+                <div class = "button_and_desc">
+                    <button id = "button_hide">hide</button>
+                    Click the button to hide the image.
+                </div>
+            </div><!--hide-->
+            <img id="chenonceau" src = "Chenonceau.jpg" alt="Chenonceau Chateau" height = "250px"/>
+
+            <div class = "section">
+                Show
+                <div class = "button_and_desc">
+                    <button id = "button_show">show</button>
+                    Click the button to show the image.
+                </div>
+            </div><!--show-->
+
+            <div class = "section">
+                Toggle
+                <div class = "button_and_desc">
+                    <button id = "button_toggle">toggle</button>
+                    Click the button to toggle the image.
+                </div>
+            </div><!--toggle-->
+
+            <div class = "section">
+                SlideDown
+                <div class = "button_and_desc">
+                    <button id = "button_slidedown">slideDown</button>
+                    Click the button to slide down the image.
+                </div>
+            </div><!--slideDown-->
+
+            <div class = "section">
+                SlideUp
+                <div class = "button_and_desc">
+                    <button id = "button_slideup">slideUp</button>
+                    Click the button to slide up the image.
+                </div>
+            </div><!--slideUp-->
+
+            <p>This paragraph will be used to demonstrate the slideToggle function in javaScript.  Thank you.</p>
+
+            <div class = "section">
+                Slidetoggle
+                <div class = "button_and_desc">
+                    <button id = "button_slidetoggle">slideToggle</button>
+                    Click the button to slide toggle the paragraph.
+                </div>
+            </div><!--slideToggle-->
+
+            <div class = "section">
+                FadeIn
+                <div class = "button_and_desc">
+                    <button id = "button_fadein">fadeIn</button>
+                    Click the button to watch the text disappear and fade in.
+                </div>
+            </div><!--fadeIn-->
+
+            <p>Watch this text!!!</p>
+
+            <div class = "section">
+                FadeOut
+                <div class = "button_and_desc">
+                    <button id = "button_fadeout">fadeOut</button>
+                    Click the button to watch the text fade out.
+                </div>
+            </div><!--fadeOut-->
+
+            <div class = "section">
+                AddClass
+                <div class = "button_and_desc">
+                    <button id = "button_addclass">addClass</button>
+                    Click the button to watch the text turn to magenta.
+                </div>
+            </div><!--addClass-->
+
+            <h4>Watch this text turn magenta after clicking addClass!!!</h4>
+
+            <div class = "section">
+                Before
+                <div class = "button_and_desc">
+                    <button id = "button_before">before</button>
+                    Click the before button to switch Hello and World.
+                </div>
+            </div><!--before-->
+
+            <p id="before">World!</p>
+            <p id="after">Hello</p>
+
+            <div class = "section">
+                After
+                <div class = "button_and_desc">
+                    <button id = "button_after">after</button>
+                    Click the before button to switch Hello and World.
+                </div>
+            </div><!--after-->
+
+            <div class = "section">
+                Append
+                <div class = "button_and_desc">
+                    <button id = "button_append">append</button>
+                    Click the append button to add World!.
+                </div>
+            </div><!--append-->
+
+            <p id="appendme">Hello</p>
+
+            <div class = "section">
+                HTML
+                  <div id="html_content">
+                    <h2>Watch this content change.</h2>
+                  </div>
+            </div><!--html-->
+
+            <div>
+            </div><!--attr-->
+
+            <div>
+            </div><!--val-->
+
+            <div>
+            </div><!--text-->
+
+            <div>
+            </div><!--data-->
+        </wrapper>
+    </body>
+</html>

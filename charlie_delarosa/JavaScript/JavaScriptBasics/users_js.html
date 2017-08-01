@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      console.log('You are now working with JavaScript!')
+
+      $('#submitForm').click(function(){
+        var first_name = document.getElementById('first_name').value;
+        var last_name = document.getElementById('last_name').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+
+        $('userForm').submit();
+        $('#dataTable').append('<tr><td>' + first_name + '</td><td>' + last_name + '</td><td>' + email + '</td><td>' + phone + '</td></tr>');
+
+      });
+
+    }); //end document ready
+
+    </script>
+  </head>
+
+  <body>
+    <table id="dataTable">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Contact #</th>
+      </tr>
+    </table>
+    <h1>Add User</h1>
+    <form id="userForm" action="" method="post">
+      <label for="">First Name: </label>
+      <input id="first_name" type="text" name="first_name" value="First Name">
+
+      <label for="">Last Name: </label>
+      <input id="last_name" type="text" name="last_name" value="Last Name">
+
+      <label for="">Email Address: </label>
+      <input id="email" type="text" name="email" value="Email Address">
+
+      <label for="">Contact No.: </label>
+      <input id="phone" type="text" name="contact_num" value="Phone #">
+
+    </form>
+
+    <button id="submitForm" type="button" name="button">Add User</button>
+
+  </body>
+</html>

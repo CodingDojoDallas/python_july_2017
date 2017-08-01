@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery demo</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("h4").click(function(){
+      alert("hello");
+      })
+      $("button").click(function(){
+      alert("you have clicked a button!");
+      });
+    });
+
+</script>
+
+<script>
+  $(document).ready(function(){
+      $('#myParagraph').text();
+  });
+</script>
+
+<script>
+  $(document).ready(function(){
+      $('button').click(function(){
+          $('#myParagraph').text('see how I .text() works as a setter!');
+      })
+  })
+</script>
+
+<script>
+  $(document).ready(function(){
+      $('button').click(function(){
+        $('h3').toggle();
+  })
+  });
+</script>
+</head>
+
+<body>
+  <h4>Click me!</h4>
+  <h4>Click me too!</h4>
+  <h3>This is h3 toggle!</h3>
+  <button>Click Me</button>
+
+  <p id='myParagraph'>This is my paragraph! </p>
+  <button> Click me to change the paragraph! </button>
+
+</body>
+
+</html>
